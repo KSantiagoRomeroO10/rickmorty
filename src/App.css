@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+body {
+   background: url('./wallpapersden.com_morty-smith-and-rick-sanchez-fanart_3840x2160.jpg') no-repeat center center fixed; 
+   background-size: cover;
+   background-attachment: fixed;
+   color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchBarTranparent{
+   position: relative;
+   float: left;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 60px;
+   background: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchBar{
+   position: fixed;
+   width: 100%;
+   height: 50px;
+   background: #2e2e2edc;
+   z-index: 2;
+   border-bottom: solid 2px #8B0000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchBar input, .button-search-bar{
+   margin: 10px;
+   float: left;
 }
 
-.App-link {
-  color: #61dafb;
+.NavLink1, .NavLink2{
+   margin: 10px;
+   float: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchBar input{
+   border-radius: 2px;
+   border: solid 1px transparent;
+   box-shadow: 8px 8px 11px -5px #000000f2;
+   padding: 5px;
+}
+
+.button-search-bar, .NavLink1, .NavLink2{
+   background: #8B0000;
+   border-radius: 2px;
+   border: solid 1px transparent;
+   cursor: pointer;
+   box-shadow: 8px 8px 11px -5px #000000f2;
+   padding: 5px;
+   color: white;
+   text-decoration: none;
+}
+
+.card{
+   position: relative;
+   background: #2e2e2edc;
+   width: 550px;
+   padding: 10px;
+   border-radius: 5px;
+   float: left;
+   margin: 30px;
+   box-shadow: 10px 10px 5px 0px #000000bf;
+}
+
+.card img{
+   box-shadow: 8px 8px 11px -5px #000000f2;
+   border-radius: 5px;
+}
+
+.card-button{
+   position: absolute;
+   right: 0;
+   top: 0;
+   margin: 5px;
+   background: #8B0000;
+   border-radius: 2px;
+   border: solid 1px transparent;
+   cursor: pointer;
+   box-shadow: 8px 8px 11px -5px #000000f2;
+}
+
+.info{
+   position: absolute;
+   left: 65%;
+   max-width: 80%;
+}
+.info0{
+   top: 20%;
+}
+.info1{
+   top: 32%;
+}
+.info2{
+   top: 44%;
+}
+.info3{
+   top: 56%;
+}
+.info4{
+   top: 68%;
+}
+
+.cv{
+   position: absolute;
+   top: 8%; 
+}
+
+.Error404{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   background: #8B0000;
+   padding: 15px;
+   border-radius: 5px;
+}
+
+.detailInfo, .detailImg{
+   position: relative;
+   width: 50%;
+   height: 90vh;
+}
+.detailInfo{
+   float: left;
+   background: #2e2e2edc;
+}
+.detailImg{
+   float: right;
+}
+.detailImg img{
+   border-radius: 50%;
+   width: 350px;
+   height: 350px;
+}
+.detailInfo .detailP, .detailImg img{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
