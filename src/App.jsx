@@ -1,18 +1,45 @@
 import './App.css';
 
 import axios from 'axios';
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
-import Cards from './components/Cards';
-import Nav from './components/Nav';
-import About from './components/About'
-import Detail from './components/Detail';
-import Error404 from './components/Error404';
+import Cards from './components/Cards/Cards';
+import Nav from './components/Nav/Nav';
+import About from './components/About/About'
+import Detail from './components/Detail/Detail';
+import Favorites from "./components/Favorites/Favorites"; 
+import Form from './components/Form/Form';
+import Error404 from './components/Error404/Error404';
 
 function App() {
 
-  let [character, setCharacter] = useState([]);
+  const [character, setCharacter] = useState([]);
+  const location = useLocation();
+
+  const [access, setAccess] = useState(false);
+  const navigate = useNavigate();
+
+  const email = 'kevin@hotmail.com';
+  const pass = '321dsa';
+
+  const login = (form) => {
+    if(form.email === email && form.pass === pass){
+      setAccess(true);
+      navigate('/home');
+    }
+  }
+
+  const logout = (logout) => {
+    if(access && logout){
+      setAccess(false);
+      navigate('/');
+    }
+  }
+
+  useEffect(() => {
+    !access && navigate('/')
+  }, [access])
 
   const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
   const API_KEY = '31f8e5b3ca42.d738d62161ed3b84a99b';
@@ -49,33 +76,25 @@ function App() {
   }
 
   return (
-    <Routes>
-      <Route path='' element={
-        <>
-          <Nav onSearch={onSearch}/>
-          <Cards character={character} onClose={onClose}/>
-        </>
-      } />
-      <Route path='about' element={
-        <>
-          <Nav onSearch={onSearch}/>
-          <About/>
-        </>
-      } />
-      <Route path='detail/:id' element={
-        <>
-          <Nav onSearch={onSearch}/>
-          <Detail/>
-        </>
-      }/>
-      <Route path=':Error404' element={
-        <>
-          <Nav onSearch={onSearch}/>
-          <Error404/>
-        </>
-      }/>
-    </Routes>
+    <>
+
+      {
+        location.pathname !== '/' && <Nav onSearch={onSearch} logout={logout}/>
+      }
+
+      <Routes>
+
+        <Route path='' element={<Form login={login}/>}/>
+        <Route path='home' element={<Cards character={character} onClose={onClose}/>} />
+        <Route path='about' element={<About/>}/>
+        <Route path='detail/:id' element={<Detail/>}/>
+        <Route path='/favorites' element={<Favorites/>} />
+        <Route path=':Error404' element={<Error404/>}/>
+
+      </Routes>
+
+    </>
   );
-}
+}mientras
 
 export default App;

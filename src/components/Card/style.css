@@ -1,0 +1,50 @@
+
+.card{
+  position: relative;
+  background: #2e2e2edc;
+  width: 550px;
+  padding: 10px;
+  border-radius: 5px;
+  float: left;
+  margin: 30px;
+  box-shadow: 10px 10px 5px 0px #000000bf;
+}
+
+.card img{
+  box-shadow: 8px 8px 11px -5px #000000f2;
+  border-radius: 5px;
+}
+
+.card-button{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+  background: #8B0000;
+  border-radius: 2px;
+  border: solid 1px transparent;
+  cursor: pointer;
+  box-shadow: 8px 8px 11px -5px #000000f2;
+}
+
+
+.info{
+  position: absolute;
+  left: 65%;
+  max-width: 80%;
+}
+.info0{
+  top: 20%;
+}
+.info1{
+  top: 32%;
+}
+.info2{
+  top: 44%;
+}
+.info3{
+  top: 56%;
+}
+.info4{
+  top: 68%;
+}

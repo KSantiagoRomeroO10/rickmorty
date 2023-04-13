@@ -1,0 +1,23 @@
+.detailInfo, .detailImg{
+  position: relative;
+  width: 50%;
+  height: 90vh;
+}
+.detailInfo{
+  float: left;
+  background: #2e2e2edc;
+}
+.detailImg{
+  float: right;
+}
+.detailImg img{
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+}
+.detailInfo .detailP, .detailImg img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

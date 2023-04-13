@@ -1,0 +1,46 @@
+.searchBarTranparent{
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: transparent;
+}
+
+.searchBar{
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background: #2e2e2edc;
+  z-index: 2;
+  border-bottom: solid 2px #8B0000;
+}
+
+.searchBar input, .button-search-bar{
+  margin: 10px;
+  float: left;
+}
+
+.NavLink1, .NavLink2{
+  margin: 10px;
+  float: right;
+}
+
+.searchBar input{
+  border-radius: 2px;
+  border: solid 1px transparent;
+  box-shadow: 8px 8px 11px -5px #000000f2;
+  padding: 5px;
+}
+
+.button-search-bar, .NavLink1, .NavLink2{
+  background: #8B0000;
+  border-radius: 2px;
+  border: solid 1px transparent;
+  cursor: pointer;
+  box-shadow: 8px 8px 11px -5px #000000f2;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}

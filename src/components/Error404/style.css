@@ -1,0 +1,14 @@
+.Error404{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: #8B0000;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.volver{
+  color: white;
+}
