@@ -22,11 +22,6 @@
   float: left;
 }
 
-.NavLink1, .NavLink2{
-  margin: 10px;
-  float: right;
-}
-
 .searchBar input{
   border-radius: 2px;
   border: solid 1px transparent;
@@ -34,7 +29,7 @@
   padding: 5px;
 }
 
-.button-search-bar, .NavLink1, .NavLink2{
+.button-search-bar{
   background: #8B0000;
   border-radius: 2px;
   border: solid 1px transparent;

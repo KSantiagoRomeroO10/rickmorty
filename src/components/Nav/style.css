@@ -1,0 +1,12 @@
+.NavLink1, .NavLink2, .NavLink3{
+  margin: 10px;
+  float: right;
+  background: #8B0000;
+  border-radius: 2px;
+  border: solid 1px transparent;
+  cursor: pointer;
+  box-shadow: 8px 8px 11px -5px #000000f2;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}

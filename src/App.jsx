@@ -9,6 +9,7 @@ import Nav from './components/Nav/Nav';
 import About from './components/About/About'
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/Form';
+import Favorites from "./components/Favorites/Favorites";
 import Error404 from './components/Error404/Error404';
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
   const onClose = (id) => {
     const charactersFiltered = character.filter(character => character.id !== id);
     setCharacter(charactersFiltered);
+    
   }
 
   return (
@@ -87,6 +89,7 @@ function App() {
         <Route path='home' element={<Cards character={character} onClose={onClose}/>} />
         <Route path='about' element={<About/>}/>
         <Route path='detail/:id' element={<Detail/>}/>
+        <Route path='favorites' element={<Favorites/>} />
         <Route path=':Error404' element={<Error404/>}/>
 
       </Routes>

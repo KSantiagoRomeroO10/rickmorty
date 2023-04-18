@@ -20,19 +20,15 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
   }
 
   useEffect(() => {
-    myFavorites.forEach(fav => {
-
-      if(fav.id === id){
-        setIsFav(true);
-      }
-      
-    })
+    myFavorites.forEach((fav) => {
+       if (fav.id === id) {
+          setIsFav(true);
+       }
+    });
   }, [myFavorites]);
   
   return (
     <div className="card">
-
-      <button onClick={handleFavorite}>{isFav ? 'Add' : 'Remove'}</button>
 
       <NavLink to={`/detail/${id}`}>
         <img src={image} alt='Error no hay imagen.'/>
@@ -42,7 +38,8 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
       <p className="info info2">Species: {species}</p>
       <p className="info info3">Gender: {gender}</p>
       <p className="info info4">Origin: {origin.name}</p>
-      <button className="card-button" onClick={() => onClose(id)}>X</button>
+      <button className="card-button1" onClick={() => onClose(id)}>X</button>
+      <button className="card-button2" onClick={handleFavorite}>{ isFav ? '❤️' : '🤍' }</button>
     </div>
   )
 }
@@ -61,6 +58,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Card);

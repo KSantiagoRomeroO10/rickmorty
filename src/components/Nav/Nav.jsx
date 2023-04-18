@@ -10,9 +10,9 @@ const Nav = ({ onSearch, logout }) => {
       <nav className="searchBar">
 
         <SearchBar onSearch={onSearch} logout={logout}/>
-        <NavLink to='/app' className='NavLink1'> Home </NavLink>
+        <NavLink to='/home' className='NavLink1'> Home </NavLink>
         <NavLink to='/about' className='NavLink2'> About </NavLink>
-        <NavLink to='/favorites'> Favorites </NavLink>
+        <NavLink to='/favorites' className='NavLink3'> Favorites </NavLink>
 
       </nav>
     </>

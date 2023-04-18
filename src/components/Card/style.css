@@ -1,4 +1,3 @@
-
 .card{
   position: relative;
   background: #2e2e2edc;
@@ -15,7 +14,7 @@
   border-radius: 5px;
 }
 
-.card-button{
+.card-button1, .card-button2{
   position: absolute;
   right: 0;
   top: 0;
@@ -25,26 +24,35 @@
   border: solid 1px transparent;
   cursor: pointer;
   box-shadow: 8px 8px 11px -5px #000000f2;
+  color: white;
 }
 
+.card-button2{
+  right: 6%;
+}
 
 .info{
   position: absolute;
   left: 65%;
   max-width: 80%;
 }
+
 .info0{
   top: 20%;
 }
+
 .info1{
   top: 32%;
 }
+
 .info2{
   top: 44%;
 }
+
 .info3{
   top: 56%;
 }
+
 .info4{
   top: 68%;
 }

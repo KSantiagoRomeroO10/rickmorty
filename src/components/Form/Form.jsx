@@ -35,14 +35,20 @@ const Form = ({ login }) => {
     <form onSubmit={handleSubmit}>
 
       <h1>Form</h1>
-
+      <hr/>
+      <br/>
       <label htmlFor="email">Email:</label>
       <input type="email" name="email" id='email' placeholder="Ingrese su email:" value={form.email} onChange={handleForm}/>
       <br/>
-      {error.email && <p>{error.email}</p>}
+      <br/>
+      {error.email && <p className='errorEmail'>{error.email}</p>}
+      <br/>
+      <br/>
       <label htmlFor="pass">Contraseña:</label>
       <input type="pass" name="pass" id="pass" placeholder="Ingrese su contraseña:" value={form.pass} onChange={handleForm}/>
-      {error.pass && <p>{error.pass}</p>}
+      <br/>
+      <br/>
+      {error.pass && <p className='errorPass'>{error.pass}</p>}
       <br/>
       <br/>
       <input type="submit" className='enviar' disabled={!form.email || !form.pass || error.email || error.pass} value='Enviar'/>
