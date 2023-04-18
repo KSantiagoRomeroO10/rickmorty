@@ -8,11 +8,11 @@ const Nav = ({ onSearch, logout }) => {
     <>
       <div className="searchBarTranparent"></div>
       <nav className="searchBar">
-            
+
         <SearchBar onSearch={onSearch} logout={logout}/>
-        <NavLink to='/app' className='NavLink1'>Home</NavLink>
-        <NavLink to='/about' className='NavLink2'>About</NavLink>
-        <NavLink to='/favorites'> FAVORITES </NavLink>
+        <NavLink to='/app' className='NavLink1'> Home </NavLink>
+        <NavLink to='/about' className='NavLink2'> About </NavLink>
+        <NavLink to='/favorites'> Favorites </NavLink>
 
       </nav>
     </>

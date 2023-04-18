@@ -38,13 +38,14 @@ const Form = ({ login }) => {
 
       <label htmlFor="email">Email:</label>
       <input type="email" name="email" id='email' placeholder="Ingrese su email:" value={form.email} onChange={handleForm}/>
-      <br />
+      <br/>
       {error.email && <p>{error.email}</p>}
       <label htmlFor="pass">Contraseña:</label>
       <input type="pass" name="pass" id="pass" placeholder="Ingrese su contraseña:" value={form.pass} onChange={handleForm}/>
       {error.pass && <p>{error.pass}</p>}
       <br/>
-      <input type="submit" disabled={!form.email || !form.pass || error.email || error.pass} value='Enviar'/>
+      <br/>
+      <input type="submit" className='enviar' disabled={!form.email || !form.pass || error.email || error.pass} value='Enviar'/>
 
     </form>
   )
