@@ -7,13 +7,12 @@ const Deatil = () => {
 
   const [character, setCharacter] = useState({})
 
-  const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
-  const API_KEY = '31f8e5b3ca42.d738d62161ed3b84a99b';
+  const URL_BASE = 'https://rickandmortyapi.com/api/character';
 
   const {id} = useParams();  //objeto con la información de la ruta.
 
   useEffect(() => {
-    axios(`${URL_BASE}/${id}?key=${API_KEY}`)
+    axios(`${URL_BASE}/${id}`)
     .then(response => response.data)
     .then((data) => {
        if (data) {
