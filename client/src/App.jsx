@@ -42,7 +42,7 @@ function App() {
   }, [access])
 
   //const URL_BASE = 'https://rickandmortyapi.com/api/character';
-  const URL_BASE = 'http://localhost:3001/rickandmorty/character';
+  const URL_BASE = 'http://localhost:3001/onsearch/';
   
 
   const onSearch = (id) => {

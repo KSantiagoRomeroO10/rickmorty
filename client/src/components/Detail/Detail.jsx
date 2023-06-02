@@ -7,7 +7,8 @@ const Deatil = () => {
 
   const [character, setCharacter] = useState({})
 
-  const URL_BASE = 'https://rickandmortyapi.com/api/character';
+  //const URL_BASE = 'https://rickandmortyapi.com/api/character';
+  const URL_BASE = 'http://localhost:3001/detail/';
 
   const {id} = useParams();  //objeto con la información de la ruta.
 
