@@ -40,6 +40,7 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
       <p className="info info4">Origin: {origin.name}</p>
       <button className="card-button1" onClick={() => onClose(id)}>X</button>
       <button className="card-button2" onClick={handleFavorite}>{ isFav ? '❤️' : '🤍' }</button>
+      
     </div>
   )
 }
